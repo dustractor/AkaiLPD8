@@ -2,7 +2,7 @@
 import midi
 import transport
 import patterns
-
+import ui
 
 # {{{1 CC assignments
 
@@ -15,14 +15,14 @@ bank_1_pad_6 = 8
 bank_1_pad_7 = 9
 bank_1_pad_8 = 10
 
-# bank_2_pad_1 = xxx
-# bank_2_pad_2 = xxx
-# bank_2_pad_3 = xxx
-# bank_2_pad_4 = xxx
-# bank_2_pad_5 = xxx
-# bank_2_pad_6 = xxx
-# bank_2_pad_7 = xxx
-# bank_2_pad_8 = xxx
+bank_2_pad_1 = 11
+bank_2_pad_2 = 12
+bank_2_pad_3 = 13
+bank_2_pad_4 = 14
+bank_2_pad_5 = 15
+bank_2_pad_6 = 16
+bank_2_pad_7 = 17
+bank_2_pad_8 = 18
 
 # bank_3_pad_1 = xxx
 # bank_3_pad_2 = xxx
@@ -110,53 +110,53 @@ def toggle_waitforinput(event):
 
 # {{{1 bank 2 pads
 
-# @e(bank_2_pad_1)
-# def xxx(event):
-#     print("xxx")
-#     xxx
-#     event.handled = True
+@e(bank_2_pad_1)
+def generic_left(event):
+    print("Generic Left Event")
+    ui.left(1)
+    event.handled = True
 
-# @e(bank_2_pad_2)
-# def xxx(event):
-#     print("xxx")
-#     xxx
-#     event.handled = True
+@e(bank_2_pad_2)
+def generic_down(event):
+    print("Generic Down Event")
+    ui.down(1)
+    event.handled = True
 
-# @e(bank_2_pad_3)
-# def xxx(event):
-#     print("xxx")
-#     xxx
-#     event.handled = True
+@e(bank_2_pad_3)
+def generic_right(event):
+    print("Generic Right Event")
+    ui.right(1)
+    event.handled = True
 
-# @e(bank_2_pad_4)
-# def xxx(event):
-#     print("xxx")
-#     xxx
-#     event.handled = True
+@e(bank_2_pad_4)
+def jog2_minus(event):
+    print("Jog2- Event")
+    ui.jog2(-1)
+    event.handled = True
 
-# @e(bank_2_pad_5)
-# def xxx(event):
-#     print("xxx")
-#     xxx
-#     event.handled = True
+@e(bank_2_pad_5)
+def jog_minus(event):
+    print("Jog- Event")
+    ui.jog(-1)
+    event.handled = True
 
-# @e(bank_2_pad_6)
-# def xxx(event):
-#     print("xxx")
-#     xxx
-#     event.handled = True
+@e(bank_2_pad_6)
+def generic_up(event):
+    print("Generic Up Event")
+    ui.up(1)
+    event.handled = True
 
-# @e(bank_2_pad_7)
-# def xxx(event):
-#     print("xxx")
-#     xxx
-#     event.handled = True
+@e(bank_2_pad_7)
+def jog_plus(event):
+    print("Jog+ Event")
+    ui.jog(1)
+    event.handled = True
 
-# @e(bank_2_pad_8)
-# def xxx(event):
-#     print("xxx")
-#     xxx
-#     event.handled = True
+@e(bank_2_pad_8)
+def jog2_plus(event):
+    print("Jog2+ Event")
+    ui.jog2(1)
+    event.handled = True
 
 # }}}1
 
