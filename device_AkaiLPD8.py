@@ -3,6 +3,7 @@ import midi
 import transport
 import patterns
 import ui
+import general
 
 # {{{1 CC assignments
 
@@ -24,7 +25,7 @@ bank_2_pad_6 = 16
 bank_2_pad_7 = 17
 bank_2_pad_8 = 18
 
-# bank_3_pad_1 = xxx
+bank_3_pad_1 = 19
 # bank_3_pad_2 = xxx
 # bank_3_pad_3 = xxx
 # bank_3_pad_4 = xxx
@@ -162,11 +163,11 @@ def jog2_plus(event):
 
 # {{{1 bank 3 pads
 
-# @e(bank_3_pad_1)
-# def xxx(event):
-#     print("xxx")
-#     xxx
-#     event.handled = True
+@e(bank_3_pad_1)
+def undo(event):
+    print("undo")
+    general.undo()
+    event.handled = True
 
 # @e(bank_3_pad_2)
 # def xxx(event):
